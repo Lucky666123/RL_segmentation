@@ -4,10 +4,10 @@ This is the code for "Medical Image Segmentation with Deep Reinforcement Learnin
 
 The proposed model consists of two neural networks. The first is FirstP-Net, whose goal is to find the first edge point and generate a probability map of the edge points positions. The second is NextP-Net, which locates the next point based on the previous edge point and image information. This model segments the image by find- ing the edge points step by step and ultimately obtaining a closed and accurate segmentation result.
 
-![Instance Segmentation Sample](images/Fig7.png)
+![examples](images/Fig7.png)
 The ground truth (GT) boundary is plotted in blue and the magenta dots are the points found by NextP-Net. The red pentagram represents the first edge point found by FirstP-Net.
 
-![Instance Segmentation Sample](images/Fig2.png)
+![process](images/Fig2.png)
 The overall process of the proposed system: FirstP-Net finds the first edge point and generates a probability map of edge points positions. NextP-Net locates the next point based on the previous edge point and image information.
 
 ## Requirements
@@ -53,8 +53,9 @@ The overall process of the proposed system: FirstP-Net finds the first edge poin
 3. Run train.py to train the DQN agent on 15 subjects from the ACDC dataset, or you can run val.py to test the proposed model on this dataset.
 
 ## Training curves and results
-![Instance Segmentation Sample](images/Fig9.png)
+![curves](images/Fig9.png)
 The changes in three separate reward values, total reward value, F-measure accuracy and APD accuracy according to the learning iterations during the training process on ACDC dataset.
 
-![Instance Segmentation Sample](images/Table.png)
+![curves](images/Table.png)
+<img src="http:..." width = "300" height = "200" div align=center />
 The segmentation results of these baselines on different testing datasets.
