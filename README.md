@@ -56,5 +56,5 @@ The overall process of the proposed system: FirstP-Net finds the first edge poin
 ![curves](images/Fig9.png)
 The changes in three separate reward values, total reward value, F-measure accuracy and APD accuracy according to the learning iterations during the training process on ACDC dataset.
 
-![curves](images/Table.png =300x200)
+![curves](images/Table.png)
 The segmentation results of these baselines on different testing datasets.
