@@ -7,6 +7,9 @@ The proposed model consists of two neural networks. The first is FirstP-Net, who
 ![Instance Segmentation Sample](images/Fig7.png)
 The ground truth (GT) boundary is plotted in blue and the magenta dots are the points found by NextP-Net. The red pentagram represents the first edge point found by FirstP-Net.
 
+![Instance Segmentation Sample](images/Fig2.png)
+The overall process of the proposed system: FirstP-Net finds the first edge point and generates a probability map of edge points positions. NextP-Net locates the next point based on the previous edge point and image information.
+
 ## Requirements
 * Python2.7
 * torch 0.4.0
@@ -26,7 +29,7 @@ The ground truth (GT) boundary is plotted in blue and the magenta dots are the p
 
         git clone https://github.com/Mayy1994/RL_segmentation.git
 
-2. As we use a crop and resize function like that in Fast R-CNN (https://github.com/longcw/RoIAlign.pytorch) to fix the size of the state, it needs to be built with the right -arch option for Cuda support before training.
+2. As we use a crop and resize function like that in Fast R-CNN (https://github.com/longcw/RoIAlign.pytorch) to fix the size of the state, it needs to be built with the right -arch option for Cuda support before training. (https://github.com/multimodallearning/pytorch-mask-rcnn)
 
     | GPU | arch |
     | --- | --- |
