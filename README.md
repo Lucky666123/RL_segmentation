@@ -6,11 +6,11 @@ The proposed model consists of two neural networks. The first is FirstP-Net, who
 
 
 ![process](images/Fig2.png)
-The overall process of the proposed system: FirstP-Net finds the first edge point and generates a probability map of edge points positions. NextP-Net locates the next point based on the previous edge point and image information.
+Figure 1. The overall process of the proposed system: FirstP-Net finds the first edge point and generates a probability map of edge points positions. NextP-Net locates the next point based on the previous edge point and image information.
 
 
 ![examples](images/Fig7.png)
-The ground truth (GT) boundary is plotted in blue and the magenta dots are the points found by NextP-Net. The red pentagram represents the first edge point found by FirstP-Net. The first and third rows are the original results and the second and fourth rows are the smoothed results after post-processing.
+Figure 2. The ground truth (GT) boundary is plotted in blue and the magenta dots are the points found by NextP-Net. The red pentagram represents the first edge point found by FirstP-Net. The first and third rows are the original results and the second and fourth rows are the smoothed results after post-processing.
 
 
 
@@ -57,8 +57,17 @@ The ground truth (GT) boundary is plotted in blue and the magenta dots are the p
 3. Run train.py to train the DQN agent on 15 subjects from the ACDC dataset, or you can run val.py to test the proposed model on this dataset.
 
 ## Training curves and results
-![curves](images/Fig9.png)
-The changes in three separate reward values, total reward value, F-measure accuracy and APD accuracy according to the learning iterations during the training process on ACDC dataset.
+* Ablation study
+###State: 
+Experiment 0: grayscale layer, Sobel layer, cropped probability map, global probability map and past points map.
+Experiment 1: grayscale layer, Sobel layer and past points map layer. 
+Experiment 2: grayscale layer, Sobel layer, cropped probability map, global probability map.
+###Reward:
+Experiment 3: employing the difference IoU reward as the final immediate reward.
 
-![curves](images/Table.png)
+![curves](images/Fig9.png)
+Figure 3. The changes in three separate reward values, total reward value, F-measure accuracy and APD accuracy according to the learning iterations during the training process on ACDC dataset.
+
+
+<div align=center><img width="550" height="500" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
 The segmentation results of these baselines on different testing datasets.
