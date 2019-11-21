@@ -62,7 +62,9 @@ Figure 2. The ground truth (GT) boundary is plotted in blue and the magenta dots
 * State: 
 
 Experiment 0: grayscale layer, Sobel layer, cropped probability map, global probability map and past points map.
+
 Experiment 1: grayscale layer, Sobel layer and past points map layer. 
+
 Experiment 2: grayscale layer, Sobel layer, cropped probability map, global probability map.
 
 * Reward:
@@ -74,5 +76,4 @@ Figure 3. The changes in three separate reward values, total reward value, F-mea
 
 
 ### Comparison with baseline
-<div align=center><img width="550" height="450" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
-The segmentation results of these baselines on different testing datasets.
+<div align=center><img width="550" height="400" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
