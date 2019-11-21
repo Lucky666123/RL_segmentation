@@ -76,4 +76,4 @@ Figure 3. The changes in three separate reward values, total reward value, F-mea
 
 
 ### Comparison with baseline
-<div align=center><img width="550" height="350" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
+<div align=center><img width="550" height="300" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
