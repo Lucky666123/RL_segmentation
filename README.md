@@ -4,11 +4,15 @@ This is the code for "Medical Image Segmentation with Deep Reinforcement Learnin
 
 The proposed model consists of two neural networks. The first is FirstP-Net, whose goal is to find the first edge point and generate a probability map of the edge points positions. The second is NextP-Net, which locates the next point based on the previous edge point and image information. This model segments the image by find- ing the edge points step by step and ultimately obtaining a closed and accurate segmentation result.
 
-![examples](images/Fig7.png)
-The ground truth (GT) boundary is plotted in blue and the magenta dots are the points found by NextP-Net. The red pentagram represents the first edge point found by FirstP-Net.
 
 ![process](images/Fig2.png)
 The overall process of the proposed system: FirstP-Net finds the first edge point and generates a probability map of edge points positions. NextP-Net locates the next point based on the previous edge point and image information.
+
+
+![examples](images/Fig7.png)
+The ground truth (GT) boundary is plotted in blue and the magenta dots are the points found by NextP-Net. The red pentagram represents the first edge point found by FirstP-Net. The first and third rows are the original results and the second and fourth rows are the smoothed results after post-processing.
+
+
 
 ## Requirements
 * Python2.7
