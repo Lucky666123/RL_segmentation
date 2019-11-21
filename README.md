@@ -57,17 +57,22 @@ Figure 2. The ground truth (GT) boundary is plotted in blue and the magenta dots
 3. Run train.py to train the DQN agent on 15 subjects from the ACDC dataset, or you can run val.py to test the proposed model on this dataset.
 
 ## Training curves and results
-* Ablation study
-###State: 
+
+### Ablation study
+* State: 
+
 Experiment 0: grayscale layer, Sobel layer, cropped probability map, global probability map and past points map.
 Experiment 1: grayscale layer, Sobel layer and past points map layer. 
 Experiment 2: grayscale layer, Sobel layer, cropped probability map, global probability map.
-###Reward:
+
+* Reward:
+
 Experiment 3: employing the difference IoU reward as the final immediate reward.
 
 ![curves](images/Fig9.png)
 Figure 3. The changes in three separate reward values, total reward value, F-measure accuracy and APD accuracy according to the learning iterations during the training process on ACDC dataset.
 
 
-<div align=center><img width="550" height="500" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
+### Comparison with baseline
+<div align=center><img width="550" height="450" src="https://github.com/Mayy1994/RL_segmentation/blob/master/images/Table2.png"/></div>
 The segmentation results of these baselines on different testing datasets.
