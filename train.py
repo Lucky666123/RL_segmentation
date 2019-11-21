@@ -58,12 +58,10 @@ def reward_contour(next_p, target, reward_ratio):
     distance = point.distance(contours_line)
 
     if distance <= 10:
-        reward = - distance
+        reward = reward_ratio * (10 - distance) 
     else:
-        reward = -10
-
-    # normalization
-    reward = reward_ratio * (reward + 10) 
+        reward = 0
+    
     distance = round(distance, 4)
 
     return distance, reward
